@@ -26,7 +26,10 @@ FlexSched is a student-driven program that helps students manage pending require
 
 
 ## How to Run the Program
-
+1. Install Programming Language Python.
+2. Go to the Source Code Folder.
+3. Download the Project.
+4. Run the program.
 
 ## Sample Output
 
