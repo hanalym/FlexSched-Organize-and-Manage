@@ -1,7 +1,7 @@
 # FlexSched-Organize-and-Manage
 
 ## Project Description 
-FlexSched is a student-driven program that helps students manage pending requirements, schedules, and tasks. It also allows students to share tips and notes with each other to make assignments easier to complete.
+FlexSched is a student-driven program that helps students manage pending requirements, schedules, and tasks. It also allows students to share tips and notes with each other to make assignments easier to complete. By combining task management with collaboration, FlexSched aims to make academic learning more organized, efficient, and less stressful to studenrs
 
 ## Objectives
 - Remind students of their remaining requirements.
