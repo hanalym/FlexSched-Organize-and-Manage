@@ -41,7 +41,7 @@ FlexSched is a student-driven program that helps students manage pending require
 
 ## Sample Output
 ### Sample Output 1
-
+![...](https://github.com/user-attachments/assets/19fbd544-c84c-4bef-9fc0-ec5e5ceabb8a" />)
 
 ### Sample Output 2
 
@@ -54,6 +54,8 @@ FlexSched is a student-driven program that helps students manage pending require
 
 ### Sample Output 3.2.2
 
+
+### Sample Output 3.3
 
 ## Authors/Contributors
 - Johanne Alwynne V. Roco
