@@ -40,8 +40,19 @@ FlexSched is a student-driven program that helps students manage pending require
 4. Run the program.
 
 ## Sample Output
-
 ### Sample Output 1
+
+
+### Sample Output 2
+
+
+### Sample Output 3.1
+
+
+### Sample Output 3.2.1
+
+
+### Sample Output 3.2.2
 
 
 ## Authors/Contributors
