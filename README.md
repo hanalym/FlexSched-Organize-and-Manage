@@ -41,21 +41,22 @@ FlexSched is a student-driven program that helps students manage pending require
 
 ## Sample Output
 ### Sample Output 1
-![Sample Output 1](https://github.com/user-attachments/assets/19fbd544-c84c-4bef-9fc0-ec5e5ceabb8a" />)
+<img src="https://github.com/user-attachments/assets/19fbd544-c84c-4bef-9fc0-ec5e5ceabb8a" alt="Sample Output 1" width="500" height="350">
 
 ### Sample Output 2
-
+<img src="https://github.com/user-attachments/assets/41888a8c-e34a-411b-8878-8e7ec5ecafee" alt="Sample Output 2" width="500" height="350">
 
 ### Sample Output 3.1
-
+<img src="https://github.com/user-attachments/assets/bdcde335-5e57-4bd8-aec1-6de23b20a301" alt="Sample Output 3.1" width="500" height="350">
 
 ### Sample Output 3.2.1
-
+<img src="https://github.com/user-attachments/assets/a1d05e1e-c09f-42d8-b246-b4415753bebb" alt="Sample Output 3.2.1" width="500" height="350">
 
 ### Sample Output 3.2.2
-
+<img src="https://github.com/user-attachments/assets/f4f6fd9d-00d0-4429-b18c-4e6895bcec69" alt="Sample Output 3.2.2" width="500" height="350">
 
 ### Sample Output 3.3
+<img src="https://github.com/user-attachments/assets/d8150191-9a71-416f-a0d8-d636f6d4bf8b" alt="Sample Output 3.3" width="500" height="350">
 
 ## Authors/Contributors
 - Johanne Alwynne V. Roco
