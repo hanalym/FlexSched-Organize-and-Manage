@@ -20,7 +20,7 @@ FlexSched is a student-driven program that helps students manage pending require
 - Tips Sharing/Access
 
 ### Additional Features
-- Add nicknames for tips
+- Add notes to any assessment
 - Get tips from the system
 - Simpify and summarize requirements' guidelines
 
