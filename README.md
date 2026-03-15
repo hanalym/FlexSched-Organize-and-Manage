@@ -4,12 +4,12 @@
 FlexSched is a student-driven program that helps students manage pending requirements, schedules, and tasks. It addresses common issue of students cramming or forgetting assessments due to poor time management and lack of organization. The system allows users/students to upload assessment details, track upcoming deadlines, share/access study tips, and input class schedules. By combining task management with collaboration, FlexSched aims to make academic learning more organized, efficient, and less stressful to students.
 
 ## Objectives
-- Remind students of their remaining requirements
-- Reduce cramming behavior by enabling effective planning and time management
-- Provide tips and assistance from peers
-- Help students schedule tasks effectively
-- Improve academic performance by minimizing late submissions and having higher-quality work preparation 
-- Encourage collaboration between learners and teachers
+- Remind students of their remaining requirements.
+- Reduce cramming behavior by enabling effective planning and time management.
+- Provide tips and assistance from peers.
+- Help students schedule tasks effectively.
+- Improve academic performance by minimizing late submissions and having higher-quality work preparation. 
+- Encourage collaboration between learners and teachers.
 
 
 ## Features
@@ -24,9 +24,9 @@ FlexSched is a student-driven program that helps students manage pending require
 - Get tips from the system
 - Simpify and summarize requirements' guidelines
 
-## Problem Addressed
-1. Forgetting assessments and their requirements
-2. Cramming tasks due to insuffient time management
+## Problems Addressed
+1. Forgetting assessments and their requirements.
+2. Cramming tasks due to insuffient time management.
 3. Receiving low scores/failing due to late submissions or subpar work from last-minute efforts.
 
 ## Program Requirements
