@@ -41,6 +41,8 @@ FlexSched is a student-driven program that helps students manage pending require
 
 ## Sample Output
 
+### Sample Output 1
+
 
 ## Authors/Contributors
 - Johanne Alwynne V. Roco
