@@ -1,12 +1,17 @@
 
+#FlexSched: Organize and Manage
+#Created Using Visual Studio
+
 import datetime
 from re import match
 from traceback import print_exception
 
 
 requirement_list = {} # Used for acessing each requirement. Keys are the due date, Values are the subject
-requirement_note = {} # Used for the tip of the requirement. Keys are the due date, Values are the tips
-changelist = {} #Used as a way to change any requirement/due date/note. Keys and Values vary
+requirement_note = {} # Used for the tip of the requirement. Keys are the due date, Values are the notes
+changelist = {} #Used as a way to change or delete any requirement/due date/note. Keys and Values vary
+sched_day = {} #Used for the schedule. Keys are the exact time a session starts, Values are the day.
+sched_subject = {} #Used for the schedule. Keys are the exact time a session starts, Values are the subject.
 
 name = input("Input your name: ") 
 
@@ -19,15 +24,16 @@ while True:
     print("2. List Due Requirements")
     print("3. Edit Requirement/Due Date/Note")
     print("4. Remove a Requirement")
-    print("5. Update Schedule")
+    print("5. Add to Schedule")
     print("6. View Schedule")
-    print("7. End Program")
+    print("7. Clear Entire Schedule")
+    print("8. End Program")
     choice = int(input())
 
     if choice == 1: #Input == 1
         print("Input the subject and the type of requirement (e.g.: Science: Project)") 
         subject = input() # Requirement input
-        print("Input the due date and time. (mm/dd/yyyy H:M.S; FORMAT SENSITIVE)") 
+        print("Input the due date and time (in military time). (mm/dd/yyyy H:M.S; FORMAT SENSITIVE)") 
         due_time = input() #Due date input
         due_time = datetime.datetime.strptime(due_time, "%m/%d/%Y %H:%M.%S") # Converting string to datetime 
 
@@ -178,25 +184,177 @@ while True:
 
 
     elif choice == 4: #Input == 4
-        print("Feature in the works!")
-        input('Press "Enter" to continue')
+        for_counter = 0
+        for subject, due_time, note in zip(requirement_list.values(), requirement_list.keys(), requirement_note.values()):
+
+            for_counter = for_counter + 1
+            print(f"""{for_counter}. {subject}
+            Due Date: {due_time} 
+            Note: {note}""")
+
+            changelist[for_counter] = due_time
+
+        choice = int(input("Input a number to remove the requirement and its note: "))
+
+        change = changelist[choice]
+        removed_req = requirement_list.pop(change) #Removes requirement with the same key. Same with the next line, but removes the note.
+        removed_note = requirement_note.pop(change) 
+        changelist = {} #Clears changelist for any future changes.
+
+        print(f"""Removed Requirement and Note:
+        {removed_req}
+        {removed_note}
+        """)
+
+        print("Press Enter to Continue")
 
     elif choice == 5:
-        print("Feature in the works!")
-        input('Press "Enter" to continue')
 
+        print("NOTE: For your convinience, order the sessions by time. This is not required, but it is recommended.")
+
+        subject = input("Input the subject of the session: ")
+
+        date_input = input("Input the time the session STARTS in milirary time (Format HH:MM.SS; FORMAT SENSITIVE): ")
+        date_input = datetime.datetime.strptime(date_input, "%H:%M.%S")
+
+        choice = int(input("""Input the number with the day of the session
+1. Sunday
+2. Monday
+3. Tuesday
+4. Wednesday
+5. Thursday
+6. Friday
+7. Saturday 
+"""))
+
+        match choice: #Sorting and Inputting the day and subject into the schedule dictionaries
+            case 1:
+                sched_day[date_input] = "Sunday"
+                sched_subject[date_input] = subject
+            case 2:
+                sched_day[date_input] = "Monday"
+                sched_subject[date_input] = subject
+            case 3:
+                sched_day[date_input] = "Tuesday"
+                sched_subject[date_input] = subject
+            case 4:
+                sched_day[date_input] = "Wednesday"
+                sched_subject[date_input] = subject
+            case 5:
+                sched_day[date_input] = "Thursday"
+                sched_subject[date_input] = subject
+            case 6:
+                sched_day[date_input] = "Friday"
+                sched_subject[date_input] = subject
+            case 7:
+                sched_day[date_input] = "Saturday"
+                sched_subject[date_input] = subject
+
+        print("Succesfully Added! Press Enter to Continue")
+       
     elif choice == 6:
-        print("Feature in the works!")
-        input('Press "Enter" to continue')
+        choice = int(input("""Input the number with the day of the session you want to view
+1. Sunday
+2. Monday
+3. Tuesday
+4. Wednesday
+5. Thursday
+6. Friday
+7. Saturday
+NOTE: May not be fully ordered by time depeding on input.
+"""))
+        for_counter = 1
+        match choice: #Outputting the schedule based on the day input
+            case 1:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Sunday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+            case 2:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Monday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+            case 3:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Tuesday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+            case 4:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Wednesday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+            case 5:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Thursday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+            case 6:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Friday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+            case 7:
+                for time, day, subject in zip(sched_day.keys(), sched_day.values(), sched_subject.values()):
+                    if day == "Saturday":
+                         print(f"""{for_counter}.
+Subject: {subject}
+Date: {time.strftime('%H:%M.%S')}
+                         """)
+                         for_counter = for_counter + 1
+
+        print("Succesfully outputted! Press Enter to Continued")
+        input()
 
     elif choice == 7:
+        print("""Are you sure you want to clear the schedule?
+1. Yes
+2. No
+""")
+        choice = int(input("Enter your choice: "))
+        if choice == 1:
+            sched_day.clear()
+            sched_subject.clear()
+            print("Schedule cleared! Press Enter to Continue")
+        else:
+            print("Operation Cancelled. Press Enter to Continue")
+
+        input()
+
+    elif choice == 8:
         break
 
     else: #Invalid Input Check
         print("Invalid Input")
         input('Press "Enter" to continue')
 
-print(f"Thanks for using, {name}!")
+print(f"Thanks for using FlexSched, {name}!")
 input('Press "Enter" to end the program')
+
 
 
